@@ -46,20 +46,15 @@ App = () => {
   }
 
   const linking = {
-    prefixes: ['recipes://'],
+    prefixes: ['games://'],
     config: {
       screens: {
-        Feed: 'feed/:title',
-        Detail: 'detail/:foodName',
-        Favorites: 'favorites/:user/:id',
-        Contacts: 'contacts/:user?',
+        Feed: 'feed/',
+        Detail: 'detail/',
+        Favorites: 'favorites/',
+        Contacts: 'contacts/',
         Settings: {
-          path: 'settings/:color/:age/:isVerified',
-          parse: {
-            age: Number,
-            isVerified: Boolean,
-            color: (color) => `color-${color}`
-          }
+          path: 'settings/',
         }
       }
     }

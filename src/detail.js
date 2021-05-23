@@ -30,9 +30,9 @@ Detail = ({route, navigation}) => {
 
   return (
     <View style={globalStyles.container}>
-            <Text>{route.params.title}</Text>
-            <Text>{route.params.body}</Text>
-            <Text>{route.params.rating}</Text>
+            <Text style={globalStyles.titleText}>{route.params.title}</Text>
+            <Text style={globalStyles.titleText}>{route.params.body}</Text>
+            <Text style={globalStyles.titleText}>{route.params.rating}</Text>
     </View>
   );
 }

@@ -23,20 +23,6 @@ Feed = ({navigation}) => {
                         <Text style={globalStyles.titleText}>{item.title} </Text>
                     </TouchableOpacity>
                 )} />
-      {
-        Platform.select({
-          ios:
-            <Button
-              title='Go to Feed Item'
-              onPress={() => navigation.navigate('Detail', { foodName: "Detail Screen" })}
-            />,
-          android:
-            <TouchableOpacity
-              onPress={() => navigation.navigate('Detail', { foodName: "Detail Screen" })}>
-              <Text style={styles.androidButtonText}>Go to FeedItem</Text>
-            </TouchableOpacity>
-        })
-      }
 
     </View>
   );
