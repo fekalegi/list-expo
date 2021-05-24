@@ -47,16 +47,11 @@ App = () => {
 
   const linking = {
     prefixes: ['games://'],
-    config: {
-      screens: {
-        Feed: 'feed/',
-        Detail: 'detail/',
-        Favorites: 'favorites/',
-        Contacts: 'contacts/',
-        Settings: {
-          path: 'settings/',
-        }
-      }
+    Feed: {
+      screen: Feed,
+    },
+    Detail: {
+      screen: Detail,
     }
   }
 
@@ -66,7 +61,7 @@ App = () => {
         name="Feed"
         children={this.createDrawer}
         options={({ navigation }) => ({
-          title: "React Navigation",
+          title: "List Expo",
           headerLeft: () =>
             <Icon
               onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
